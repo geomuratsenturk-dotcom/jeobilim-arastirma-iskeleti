@@ -1,0 +1,239 @@
+---
+title: "[Makale başlığınız]"
+subtitle: "[Varsa alt başlık]"
+author:
+  - name: "[Adınız Soyadınız]"
+    orcid: "0000-0000-0000-0000"
+    email: "[eposta@kurum.edu.tr]"
+    affiliations:
+      - name: "[Kurumunuz]"
+        department: "[Bölümünüz]"
+        city: "[Şehir]"
+        country: "Türkiye"
+date: "2026-07-31"
+lang: tr
+
+abstract: |
+  [Öz buraya. Genellikle 150-250 kelime. Dört soruyu sırayla cevaplayın:
+  hangi problem ele alınıyor, hangi yöntem kullanıldı, ne bulundu, bu
+  bulgu neden önemli. Kaynak göstermeyin, kısaltma kullanmayın.]
+
+keywords:
+  - [anahtar kelime 1]
+  - [anahtar kelime 2]
+  - [anahtar kelime 3]
+
+bibliography: kaynaklar.bib
+# Derginin istediği atıf stilini indirin ve buraya yazın.
+# Stil dosyaları: https://github.com/citation-style-language/styles
+# csl: apa.csl
+
+format:
+  pdf:
+    documentclass: article
+    papersize: a4
+    fontsize: 11pt
+    linestretch: 1.5
+    number-sections: true
+    toc: false
+    keep-tex: true
+    include-in-header:
+      text: |
+        \usepackage{lineno}
+        \linenumbers
+  docx:
+    number-sections: true
+    reference-doc: null   # Derginin şablonu varsa yolunu buraya yazın
+  html:
+    toc: true
+    number-sections: true
+    embed-resources: true
+
+execute:
+  echo: false
+  warning: false
+---
+
+<!--
+NASIL KULLANILIR
+
+Bu belge, analiz betiklerinin ürettiği şekilleri doğrudan okur. Yani:
+
+  1. Analizi çalıştırırsınız      -> sekiller/ klasörü güncellenir
+  2. Bu belgeyi derlersiniz       -> yeni şekiller makaleye girer
+
+Şekli elle kopyalayıp yapıştırmazsınız. Bu, yeniden üretilebilir
+çalışmanın en somut faydasıdır: veri değişirse makale kendiliğinden
+güncellenir.
+
+Derlemek için:
+  quarto render makale/makale.qmd --to pdf
+  quarto render makale/makale.qmd --to docx
+
+Quarto kurulu değilse:
+  pandoc makale/makale.qmd -o makale.docx --citeproc --bibliography=kaynaklar.bib
+
+Köşeli parantezli yerleri kendi içeriğinizle değiştirin, sonra köşeli
+parantezleri silin. Bu yorum bloğunu da silin.
+-->
+
+# Giriş
+
+[Giriş bölümü genellikle üç katmanlıdır ve daralarak ilerler.]
+
+[Birinci katman, geniş bağlam. Bu konu neden önemli, alanda hangi soru
+tartışılıyor. Bir iki paragraf.]
+
+[İkinci katman, mevcut bilgi ve boşluk. Kim ne yapmış, ne bulmuş, neyi
+çözmemiş. Burada kaynak yoğunluğu en yüksektir. Boşluğu açıkça
+adlandırın: "Ancak bu çalışmaların hiçbiri ... ele almamıştır."]
+
+[Üçüncü katman, sizin katkınız. Bu çalışmada ne yaptığınız ve neyi
+gösterdiğiniz. Genellikle "Bu çalışmada ..." diye başlayan bir paragraf.]
+
+# Çalışma alanı ve veri
+
+## Çalışma alanı
+
+[Alanın konumu, jeolojik ortamı, neden bu alanın seçildiği. Bir konum
+haritası neredeyse her zaman gerekir.]
+
+## Veri
+
+[Hangi veri, nereden, ne zaman, hangi çözünürlükte. Bu bölümü
+`veri/VERI_SOZLUGU.md` dosyasından üretebilirsiniz.]
+
+Arazi çalışmasında toplam 60 noktada ölçüm yapılmıştır (@fig-noktalar).
+Sayısal yükseklik modeli olarak [kaynak] verisi kullanılmıştır.
+
+![Arazi ölçüm noktalarının litolojiye göre dağılımı. Daire büyüklüğü
+noktanın yüksekliğiyle orantılıdır.](../sekiller/sekil_01_nokta_dagilimi.png){#fig-noktalar width=90%}
+
+# Yöntem
+
+[Yöntem bölümünün ölçütü şudur: bu bölümü okuyan bir meslektaşınız
+çalışmayı tekrarlayabilmelidir. Yazılım adı yetmez, sürüm ve parametre
+de gerekir.]
+
+Bütün analizler Python 3.11 ortamında yürütülmüştür. Vektör veri işlemleri
+GeoPandas [@jordahl2020geopandas], raster işlemleri Rasterio
+[@gillies_rasterio] ve GDAL [@gdal] ile yapılmıştır. Sismik dalga formu
+analizinde ObsPy [@beyreuther2010obspy] kullanılmıştır. Sayısal hesaplar
+NumPy [@harris2020numpy] ve SciPy [@virtanen2020scipy], görselleştirme
+Matplotlib [@hunter2007matplotlib] ile gerçekleştirilmiştir.
+
+## Arazi verisinin işlenmesi
+
+[Koordinat dönüşümü, temizleme, birleştirme adımları.]
+
+Koordinatlar WGS 84 coğrafi sisteminden UTM 35. dilime (EPSG:32635)
+dönüştürülmüştür. Mesafe hesaplarının metrik bir sistemde yapılması
+zorunludur.
+
+## Arazi değişkenlerinin türetilmesi
+
+[Eğim, bakı, gölgeli kabartma hesabı ve kullanılan yöntem.]
+
+Eğim ve bakı, Horn yöntemiyle hesaplanmıştır. Gölgeli kabartma için ışık
+kaynağı 315 derece azimutta ve 45 derece yükselme açısında
+konumlandırılmıştır (@fig-arazi).
+
+![Sayısal yükseklik modelinden türetilen arazi değişkenleri.
+(a) yükseklik, (b) eğim, (c) gölgeli kabartma.](../sekiller/sekil_02_arazi_degiskenleri.png){#fig-arazi width=100%}
+
+## Sismik kayıtların işlenmesi
+
+[Ön işleme ve süzgeç parametreleri. Süzgeç sınırlarını mutlaka yazın.]
+
+Kayıtlara sırasıyla ortalama çıkarma, doğrusal eğilim giderme ve yüzde 5
+Hann pencereleme uygulanmıştır. Ardından 1-20 Hz aralığında, dört köşeli,
+sıfır fazlı bant geçirgen süzgeç uygulanmıştır (@fig-dalga). Sıfır faz
+tercihi, varış zamanı ölçümlerinde faz kaymasını önlemek içindir.
+
+![[İstasyon] kaydının ham ve süzülmüş dalga formları ile genlik
+spektrumu.](../sekiller/sekil_03_dalga_formu.png){#fig-dalga width=95%}
+
+# Bulgular
+
+[Bulgular bölümünde yorum yapılmaz, gözlem aktarılır. Yorum tartışmaya
+aittir. Her şekle ve tabloya metinde en az bir kez atıf yapın.]
+
+[Sayıları metinde tekrarlamayın. Tabloda olan bir değeri metne yeniden
+yazmak yerine eğilimi anlatın: "Eğim değerleri kuzeye doğru sistematik
+olarak artmaktadır (@tbl-litoloji)."]
+
+```{r}
+#| label: tbl-litoloji
+#| tbl-cap: "Litolojiye göre nokta sayısı ve yükseklik istatistikleri."
+#| eval: false
+
+# Bu blok, ciktilar/ klasöründeki tabloyu doğrudan okur.
+# R yerine Python kullanacaksanız aşağıdaki Python bloğunu açın.
+tablo <- read.csv("../ciktilar/tablo_01_litoloji_ozeti.csv")
+knitr::kable(tablo)
+```
+
+```{python}
+#| label: tbl-litoloji-py
+#| tbl-cap: "Litolojiye göre nokta sayısı ve yükseklik istatistikleri."
+#| eval: false
+
+import pandas as pd
+from IPython.display import Markdown
+
+tablo = pd.read_csv("../ciktilar/tablo_01_litoloji_ozeti.csv")
+Markdown(tablo.to_markdown(index=False))
+```
+
+# Tartışma
+
+[Tartışma bulguları yorumlar ve literatürle ilişkilendirir. Sık yapılan
+hata, bulguları yeniden anlatmaktır. Bunun yerine dört soruyu cevaplayın:]
+
+[1. Bulgular ne anlama geliyor?]
+
+[2. Mevcut literatürle uyumlu mu, çelişiyor mu? Çelişiyorsa neden?]
+
+[3. Bu çalışmanın sınırları neler? Sınırları kendiniz yazmazsanız hakem
+yazar. Kendiniz yazdığınızda çalışmanın güvenilirliği artar.]
+
+[4. Bundan sonra ne yapılmalı?]
+
+# Sonuç
+
+[Üç beş cümle. Yeni bilgi eklemeyin, yeni kaynak göstermeyin. Çalışmanın
+ana katkısını ve en önemli bulgusunu net biçimde yazın.]
+
+# Veri ve kod erişilebilirliği {.unnumbered}
+
+Bu çalışmada kullanılan analiz kodları
+[https://github.com/kullanici-adiniz/depo-adi](https://github.com/kullanici-adiniz/depo-adi)
+adresinde MIT lisansı altında açık erişimlidir. Veri seti
+[Zenodo DOI] adresinde CC BY 4.0 lisansıyla arşivlenmiştir.
+
+[Bu bölüm giderek daha çok dergi tarafından zorunlu tutuluyor. Depoyu
+Zenodo'ya bağlayıp kalıcı DOI aldıysanız burada belirtin. Veri
+paylaşılamıyorsa nedenini açıkça yazın: kişisel veri, kurumsal kısıt,
+ticari gizlilik gibi.]
+
+# Yazar katkıları {.unnumbered}
+
+[CRediT taksonomisine göre yazın. Kategoriler: kavramsallaştırma,
+yöntem, yazılım, doğrulama, biçimsel analiz, araştırma, kaynaklar,
+veri yönetimi, yazma (ilk taslak), yazma (gözden geçirme ve düzenleme),
+görselleştirme, denetim, proje yönetimi, fon temini.]
+
+# Teşekkür {.unnumbered}
+
+[Fon desteği, arazi izinleri, veri sağlayan kurumlar, yardımcı olan
+kişiler. Yazar olmayan katkı sahipleri buraya yazılır.]
+
+# Çıkar çatışması beyanı {.unnumbered}
+
+[Yazarlar herhangi bir çıkar çatışması bulunmadığını beyan eder. Varsa
+açıkça yazın.]
+
+# Kaynaklar {.unnumbered}
+
+::: {#refs}
+:::
