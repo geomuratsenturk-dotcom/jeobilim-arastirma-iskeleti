@@ -1,0 +1,13 @@
+Calistirma zamani (UTC): 2026-07-31T10:45:47+00:00
+Isletim sistemi        : Linux-6.18.5-x86_64-with-glibc2.39
+Python                 : 3.11.15
+
+Paket surumleri:
+  numpy        2.4.4
+  pandas       3.0.2
+  geopandas    1.1.4
+  rasterio     1.4.4
+  pyproj       3.7.2
+  shapely      2.1.2
+  obspy        1.5.0
+  matplotlib   3.10.9
