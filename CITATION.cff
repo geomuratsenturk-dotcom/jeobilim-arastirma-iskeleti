@@ -1,37 +1,37 @@
-# Bu dosya, deponuzun nasıl kaynak gösterileceğini tanımlar.
-# GitHub bu dosyayı otomatik okur ve depo sayfasında
-# "Cite this repository" düğmesi gösterir.
+# Bu dosya, deponun nasıl kaynak gösterileceğini tanımlar.
 #
-# Köşeli parantez içindeki alanları kendi bilgilerinizle doldurun,
-# sonra köşeli parantezleri silin.
+# İki yerde kullanılır:
+#   1. GitHub bu dosyayı okuyup depo sayfasında "Cite this repository"
+#      düğmesi gösterir.
+#   2. Zenodo, sürüm arşivlerken kayıt bilgilerini buradan alır.
+#      Başlık, yazar, kurum, ORCID, lisans ve anahtar kelimeler
+#      doğrudan bu dosyadan geçer.
 #
 # Doğrulamak için: pip install cffconvert && cffconvert --validate
 
 cff-version: 1.2.0
 message: "Bu çalışmayı kullanırsanız lütfen aşağıdaki gibi kaynak gösterin."
 
-title: "[Proje adınız]"
+title: "Yer Bilimleri Araştırma Deposu İskeleti"
 abstract: >-
-  [Projenin iki üç cümlelik özeti. Hangi soruyu ele alıyor,
-  hangi veriyi kullanıyor, ne üretiyor.]
+  Saha verisinden akademik yayına giden süreci tek bir depoda toplayan,
+  yeniden üretilebilir araştırma şablonu. Coğrafi bilgi sistemleri,
+  uzaktan algılama ve sismoloji alanlarında çalışan üç örnek analiz içerir.
+  Ham veriye dokunulmaması ve her çıktının bir betikten üretilmesi ilkesine
+  dayanır. Analizler farklı işletim sistemlerinde ve farklı Python
+  sürümlerinde aynı sayısal sonuçları üretir.
 
 type: software
-version: 0.1.0
+version: 1.0.0
 date-released: "2026-07-31"
 
 authors:
-  - family-names: "[Soyadınız]"
-    given-names: "[Adınız]"
-    orcid: "https://orcid.org/0000-0000-0000-0000"
-    affiliation: "[Kurumunuz]"
-    email: "[eposta@kurum.edu.tr]"
-  # Ek yazarları aynı biçimde alt alta ekleyin.
+  - family-names: "Şentürk"
+    given-names: "Murat"
+    orcid: "https://orcid.org/0000-0002-9672-3021"
+    affiliation: "Süleyman Demirel Üniversitesi, Jeoloji Mühendisliği Bölümü, Isparta, Türkiye"
 
-# Depo bağlantısı
-repository-code: "https://github.com/[kullanici-adiniz]/[depo-adi]"
-
-# Zenodo'ya bağladıysanız aldığınız DOI'yi buraya yazın.
-# doi: "10.5281/zenodo.0000000"
+repository-code: "https://github.com/geomuratsenturk-dotcom/jeobilim-arastirma-iskeleti"
 
 license: MIT
 
@@ -40,17 +40,24 @@ keywords:
   - coğrafi bilgi sistemleri
   - uzaktan algılama
   - sismoloji
+  - stratigrafi
   - yeniden üretilebilir araştırma
+  - açık bilim
+  - Python
+
+# Zenodo sürümü arşivledikten sonra verdiği DOI buraya eklenecek.
+# doi: "10.5281/zenodo.XXXXXXX"
 
 # Deponun kendisi yerine ilgili makalenin kaynak gösterilmesini
-# istiyorsanız aşağıdaki bölümü doldurun ve yorum işaretlerini kaldırın.
+# istiyorsanız aşağıdaki bölümü doldurup yorum işaretlerini kaldırın.
 #
 # preferred-citation:
 #   type: article
 #   title: "[Makale başlığı]"
 #   authors:
-#     - family-names: "[Soyadınız]"
-#       given-names: "[Adınız]"
+#     - family-names: "Şentürk"
+#       given-names: "Murat"
+#       orcid: "https://orcid.org/0000-0002-9672-3021"
 #   journal: "[Dergi adı]"
 #   year: 2026
 #   volume: 0
