@@ -187,8 +187,9 @@ spektrumu.](../sekiller/sekil_03_dalga_formu.png){#fig-dalga width=95%}
 aittir. Her şekle ve tabloya metinde en az bir kez atıf yapın.]
 
 [Sayıları metinde tekrarlamayın. Tabloda olan bir değeri metne yeniden
-yazmak yerine eğilimi anlatın: "Eğim değerleri kuzeye doğru sistematik
-olarak artmaktadır (@tbl-litoloji)."]
+yazmak yerine eğilimi anlatın. Örnek: "Eğim değerleri kuzeye doğru
+sistematik olarak artmaktadır (`@tbl-litoloji`)." Buradaki gönderme
+biçimi, aşağıdaki tablo bloğunu etkinleştirdiğinizde çalışır.]
 
 <!--
 TABLOYU OTOMATİK EKLEME
