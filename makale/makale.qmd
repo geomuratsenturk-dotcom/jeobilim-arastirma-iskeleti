@@ -23,7 +23,20 @@ keywords:
   - [anahtar kelime 2]
   - [anahtar kelime 3]
 
-bibliography: kaynaklar.bib
+# İki kaynakça dosyası kullanılıyor. Ayrımın nedeni önemli:
+#
+#   kaynaklar.bib  Elle yazılan kayıtlar. Yazılım atıfları burada durur
+#                  (ObsPy, GeoPandas, Rasterio ve diğerleri). Nadiren değişir.
+#
+#   zotero.bib     Zotero'nun Better BibTeX ile otomatik yazdığı dosya.
+#                  Literatür kayıtları burada, sık güncellenir.
+#
+# İkisini ayrı tutmak, Zotero'nun otomatik yazma işleminin elle
+# girdiğiniz kayıtları silmesini engeller.
+bibliography:
+  - kaynaklar.bib
+  - zotero.bib
+
 # Derginin istediği atıf stilini indirin ve buraya yazın.
 # Stil dosyaları: https://github.com/citation-style-language/styles
 # csl: apa.csl
@@ -105,6 +118,20 @@ haritası neredeyse her zaman gerekir.]
 
 Arazi çalışmasında toplam 60 noktada ölçüm yapılmıştır (@fig-noktalar).
 Sayısal yükseklik modeli olarak [kaynak] verisi kullanılmıştır.
+
+<!--
+ZOTERO ATIF ÖRNEĞİ
+
+Aşağıdaki cümledeki köşeli parantezli ifade, Zotero'dan gelen bir kaydı
+gösterir. Atıf anahtarını Zotero'da kaydı seçip sağ paneldeki
+"Citation Key" satırından okursunuz.
+
+Kendi metninizi yazarken bu cümleyi silip yerine kendi atıflarınızı koyun.
+Zincirin çalıştığını görmek için önce bunu derleyip deneyin.
+-->
+
+Çalışma alanının kömür ve enerji kaynakları açısından değerlendirilmesine
+dair önceki bulgular için bkz. [@senturkGeologicalEnergyPotential2023].
 
 ![Arazi ölçüm noktalarının litolojiye göre dağılımı. Daire büyüklüğü
 noktanın yüksekliğiyle orantılıdır.](../sekiller/sekil_01_nokta_dagilimi.png){#fig-noktalar width=90%}
