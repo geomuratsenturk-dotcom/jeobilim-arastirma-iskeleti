@@ -33,6 +33,11 @@ authors:
 
 repository-code: "https://github.com/geomuratsenturk-dotcom/jeobilim-arastirma-iskeleti"
 
+# Zenodo kavram DOI'si. Bütün sürümleri temsil eder ve her zaman
+# en son sürüme yönlendirir. Genel atıf için bu numara kullanılır.
+# Yalnızca sürüm 1.0.0'ı göstermek için: 10.5281/zenodo.21722689
+doi: "10.5281/zenodo.21722688"
+
 license: MIT
 
 keywords:
@@ -44,9 +49,6 @@ keywords:
   - yeniden üretilebilir araştırma
   - açık bilim
   - Python
-
-# Zenodo sürümü arşivledikten sonra verdiği DOI buraya eklenecek.
-# doi: "10.5281/zenodo.XXXXXXX"
 
 # Deponun kendisi yerine ilgili makalenin kaynak gösterilmesini
 # istiyorsanız aşağıdaki bölümü doldurup yorum işaretlerini kaldırın.

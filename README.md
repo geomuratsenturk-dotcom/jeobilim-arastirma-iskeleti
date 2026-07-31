@@ -1,5 +1,9 @@
 # Yer Bilimleri Araştırma Deposu İskeleti
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21722688.svg)](https://doi.org/10.5281/zenodo.21722688)
+[![Lisans: MIT](https://img.shields.io/badge/Lisans-MIT-yellow.svg)](LICENSE)
+[![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
+
 Saha verisinden makaleye giden yolu tek bir klasörde toplayan, yeniden
 üretilebilir bir araştırma deposu şablonu.
 
@@ -218,9 +222,27 @@ olarak arşivlenir.
 
 ## Alıntı
 
-Bu depoyu kullanan bir çalışma yayımlarsanız `CITATION.cff` dosyasındaki
-bilgileri kullanın. GitHub bu dosyayı okuyup depo sayfasında "Cite this
-repository" düğmesi gösterir.
+Bu depo Zenodo'da arşivlenmiştir ve kalıcı bir DOI numarası taşır.
+
+**Önerilen alıntı:**
+
+> Şentürk, M. (2026). *Yer Bilimleri Araştırma Deposu İskeleti* (sürüm 1.0.0)
+> [Yazılım]. Zenodo. https://doi.org/10.5281/zenodo.21722688
+
+### İki DOI arasındaki fark
+
+Zenodo her depoya iki numara verir. Hangisini kullanacağınız amacınıza bağlıdır.
+
+| DOI | Neyi gösterir | Ne zaman kullanılır |
+|---|---|---|
+| `10.5281/zenodo.21722688` | Bütün sürümler | Genel atıf. Her zaman en son sürüme yönlendirir. |
+| `10.5281/zenodo.21722689` | Yalnızca sürüm 1.0.0 | Tam olarak hangi sürümü kullandığınızı belirtmeniz gerektiğinde. |
+
+Makalenizde hangi sürümü kullandığınız sonucu etkiliyorsa ikinci numarayı
+verin. Bu, hakemin sizin çalıştırdığınız kodun aynısına erişmesini sağlar.
+
+GitHub, `CITATION.cff` dosyasını okuyup depo sayfasında "Cite this repository"
+düğmesi gösterir. Oradan APA ve BibTeX biçimlerini hazır alabilirsiniz.
 
 ---
 
