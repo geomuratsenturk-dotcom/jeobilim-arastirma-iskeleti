@@ -1,0 +1,14 @@
+ 
+---------------------------------------------------------------- 
+Cum 31.07.2026 21:55:56.66 
+Degisiklikler bulundu, gonderiliyor... 
+ M .gitignore
+ M ciktilar/ortam_bilgisi.txt
+ M sekiller/sekil_01_nokta_dagilimi.png
+ M sekiller/sekil_02_arazi_degiskenleri.png
+ M sekiller/sekil_03_dalga_formu.png
+ M sekiller/sekil_04_spektrogram.png
+?? BASLAT.bat
+?? KUR_OTOMASYON.ps1
+?? ciktilar/yedek_gunlugu.txt
+?? gece_yedegi.bat

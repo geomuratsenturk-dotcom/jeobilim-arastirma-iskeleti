@@ -61,6 +61,21 @@ htmlcov/
 # ---------------------------------------------------------------------------
 # Quarto ve LaTeX
 # ---------------------------------------------------------------------------
+
+# Derlenen makale dosyalari depoya girmez.
+# Nedeni veri dosyalariyla ayni: bunlar ikili dosyalardir ve her
+# derlemede bastan sona degisir. Git her surumun tam kopyasini saklar,
+# depo hizla sisar. Kaynagi (makale.qmd) depoda oldugu icin ciktiyi
+# istediginiz an yeniden uretebilirsiniz.
+#
+# Dergiye gonderdiginiz nihai dosyayi saklamak isterseniz iki secenek var:
+#   1. Surum etiketi olusturun (git tag), Zenodo o hali arsivler
+#   2. Asagidaki satirlari yorum haline getirip depoya alin
+makale/*.docx
+makale/*.pdf
+makale/*.html
+makale/*.tex
+
 /.quarto/
 *_files/
 *.aux
