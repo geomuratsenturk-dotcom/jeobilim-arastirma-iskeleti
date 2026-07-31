@@ -1,0 +1,51 @@
+# Conda ortam tanimi
+#
+# Kurulum:
+#     conda env create -f ortam.yml
+#     conda activate jeobilim
+#
+# Guncelleme:
+#     conda env update -f ortam.yml --prune
+#
+# Mekansal paketler icin conda-forge kanali pip'ten daha guvenilirdir.
+# GDAL, PROJ ve GEOS gibi C kutuphanelerini birlikte, uyumlu surumlerle
+# kurar. pip ile kurdugunuzda bu kutuphaneler catisabilir.
+
+name: jeobilim
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.11
+
+  # Temel bilimsel yigin
+  - numpy>=1.26
+  - pandas>=2.0
+  - scipy>=1.11
+  - matplotlib>=3.8
+
+  # Mekansal analiz
+  - geopandas>=1.0
+  - shapely>=2.0
+  - pyproj>=3.6
+  - rasterio>=1.3
+  - gdal>=3.8
+
+  # Sismoloji
+  - obspy>=1.4
+
+  # Calisma ortami
+  - jupyterlab>=4.0
+  - ipykernel
+
+  # Istege bagli. Kullanmayacaksaniz kaldirin, kurulum hizlanir.
+  - xarray>=2024.1
+  - contextily>=1.5
+  - cartopy>=0.22
+  # - pygmt>=0.11        # GMT kurulumunu da beraberinde getirir, buyuktur
+
+  # conda-forge'da bulunmayan paketler icin
+  - pip
+  - pip:
+      - cffconvert       # CITATION.cff dosyasini dogrular

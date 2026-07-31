@@ -1,0 +1,34 @@
+# Python paket gereksinimleri
+#
+# Kurulum:
+#     python -m venv .venv
+#     source .venv/bin/activate      # Windows: .venv\Scripts\activate
+#     pip install -r gereksinimler.txt
+#
+# Not: Alt sinir belirtilmis ama ust sinir konulmamistir. Makaleyi
+# gonderdiginiz anda tam surumleri dondurun:
+#     pip freeze > gereksinimler_kilitli.txt
+# ve o dosyayi da depoya ekleyin. Hakem duzeltmesi geldiginde ayni
+# ortami birebir kurabilmenizi saglar.
+
+# --- Temel bilimsel yigin ---
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
+matplotlib>=3.8
+
+# --- Mekansal analiz ---
+geopandas>=1.0        # Vektor veri: nokta, cizgi, poligon
+shapely>=2.0          # Geometri islemleri
+pyproj>=3.6           # Koordinat sistemi donusumleri
+rasterio>=1.3         # Raster veri: yukseklik modeli, uydu goruntusu
+
+# --- Sismoloji ---
+obspy>=1.4            # Dalga formu okuma, suzgec, FDSN erisimi
+
+# --- Istege bagli, kurulu degilse ilgili betik atlanir ---
+# xarray>=2024.1      # Cok boyutlu veri, NetCDF, iklim serileri
+# contextily>=1.5     # Haritalara altlik karo ekleme
+# pygmt>=0.11         # Yayin kalitesinde harita (GMT kurulumu gerektirir)
+# cartopy>=0.22       # Matplotlib ile projeksiyonlu harita
+# jupyterlab>=4.0     # Etkilesimli calisma ortami

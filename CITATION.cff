@@ -1,0 +1,60 @@
+# Bu dosya, deponuzun nasıl kaynak gösterileceğini tanımlar.
+# GitHub bu dosyayı otomatik okur ve depo sayfasında
+# "Cite this repository" düğmesi gösterir.
+#
+# Köşeli parantez içindeki alanları kendi bilgilerinizle doldurun,
+# sonra köşeli parantezleri silin.
+#
+# Doğrulamak için: pip install cffconvert && cffconvert --validate
+
+cff-version: 1.2.0
+message: "Bu çalışmayı kullanırsanız lütfen aşağıdaki gibi kaynak gösterin."
+
+title: "[Proje adınız]"
+abstract: >-
+  [Projenin iki üç cümlelik özeti. Hangi soruyu ele alıyor,
+  hangi veriyi kullanıyor, ne üretiyor.]
+
+type: software
+version: 0.1.0
+date-released: "2026-07-31"
+
+authors:
+  - family-names: "[Soyadınız]"
+    given-names: "[Adınız]"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+    affiliation: "[Kurumunuz]"
+    email: "[eposta@kurum.edu.tr]"
+  # Ek yazarları aynı biçimde alt alta ekleyin.
+
+# Depo bağlantısı
+repository-code: "https://github.com/[kullanici-adiniz]/[depo-adi]"
+
+# Zenodo'ya bağladıysanız aldığınız DOI'yi buraya yazın.
+# doi: "10.5281/zenodo.0000000"
+
+license: MIT
+
+keywords:
+  - yer bilimleri
+  - coğrafi bilgi sistemleri
+  - uzaktan algılama
+  - sismoloji
+  - yeniden üretilebilir araştırma
+
+# Deponun kendisi yerine ilgili makalenin kaynak gösterilmesini
+# istiyorsanız aşağıdaki bölümü doldurun ve yorum işaretlerini kaldırın.
+#
+# preferred-citation:
+#   type: article
+#   title: "[Makale başlığı]"
+#   authors:
+#     - family-names: "[Soyadınız]"
+#       given-names: "[Adınız]"
+#   journal: "[Dergi adı]"
+#   year: 2026
+#   volume: 0
+#   issue: 0
+#   start: 0
+#   end: 0
+#   doi: "10.0000/xxxxx"

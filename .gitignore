@@ -1,0 +1,94 @@
+# ---------------------------------------------------------------------------
+# Veri
+# ---------------------------------------------------------------------------
+# Buyuk veri dosyalari depoya girmez. Git ikili dosyalarda kotu calisir:
+# her guncelleme dosyanin tamamini yeniden saklar ve depo hizla sisar.
+# Veriyi Zenodo, Figshare veya kurumsal bir veri deposunda tutun.
+
+veri/ham/*
+veri/islenmis/*
+!veri/ham/.gitkeep
+!veri/islenmis/.gitkeep
+!veri/ham/BENIOKU.md
+
+# Ham veriniz kucukse (10 MB alti) asagidaki satiri acarak
+# belirli dosyalari depoya dahil edebilirsiniz:
+# !veri/ham/kucuk_dosya.csv
+
+# ---------------------------------------------------------------------------
+# Uretilen ciktilar
+# ---------------------------------------------------------------------------
+# Bu klasorlerin tamami betiklerden yeniden uretilebilir olmalidir.
+# Yine de makale sekilleri kucuk oldugu icin cogu arastirmaci bunlari
+# depoda tutmayi tercih eder. Tutmak istemiyorsaniz asagidaki iki satiri acin.
+
+# sekiller/*
+# ciktilar/*
+!sekiller/.gitkeep
+!ciktilar/.gitkeep
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Sanal ortamlar
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Test ve kapsam
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# ---------------------------------------------------------------------------
+# Quarto ve LaTeX
+# ---------------------------------------------------------------------------
+/.quarto/
+*_files/
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# ---------------------------------------------------------------------------
+# Isletim sistemi ve duzenleyici
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# ---------------------------------------------------------------------------
+# CBS yazilimlarinin urettigi yan dosyalar
+# ---------------------------------------------------------------------------
+*.qgz~
+*.qgs~
+*.gpkg-shm
+*.gpkg-wal
+*.aux.xml
