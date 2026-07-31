@@ -145,10 +145,39 @@ python analizler/03_sismoloji_zaman_serisi.py --cevrimici
 ## Makale taslağı
 
 `makale/makale.qmd` dosyası, analizlerin ürettiği şekilleri doğrudan
-kullanan bir Quarto belgesidir. Şekiller `sekiller/` klasöründen okunur,
-kaynakça `makale/kaynaklar.bib` dosyasından gelir.
+kullanan bir Quarto belgesidir. Şekiller `sekiller/` klasöründen okunur.
 
-Derlemek için:
+### İki kaynakça dosyası
+
+Kaynakça tek dosyada değil, ikiye ayrılmıştır. Ayrımın pratik bir nedeni var.
+
+| Dosya | Kim yönetir | İçerik |
+|---|---|---|
+| `makale/kaynaklar.bib` | Siz, elle | Kullandığınız yazılımların resmi atıfları. Nadiren değişir. |
+| `makale/zotero.bib` | Zotero, otomatik | Literatür kayıtları. Sık güncellenir. |
+
+Zotero, Better BibTeX eklentisiyle koleksiyonunuzu `zotero.bib` dosyasına
+otomatik yazar. Bu yazma işlemi dosyanın tamamını her seferinde yeniden
+üretir. Elle girdiğiniz yazılım atıflarını aynı dosyada tutsaydınız,
+ilk otomatik güncellemede hepsi silinirdi.
+
+Quarto ikisini birlikte okur, atıf yaparken hangi dosyada olduğunu
+düşünmeniz gerekmez.
+
+### Zotero bağlantısını kurma
+
+1. Zotero'da bu proje için bir koleksiyon oluşturun
+2. Better BibTeX eklentisini kurun (`belgeler/KURULUM.md` içinde adımlar var)
+3. Koleksiyona sağ tıklayın, **Dışa Aktar Koleksiyon** deyin
+4. Biçim olarak **Better BibLaTeX** seçin ve **"Keep updated"** kutusunu işaretleyin
+5. Dosyayı `makale/zotero.bib` olarak kaydedin
+
+Bundan sonra Zotero'ya eklediğiniz her kaynak bu dosyada kendiliğinden
+belirir. Atıf anahtarını Zotero'da kaydı seçip sağ paneldeki
+**Citation Key** satırından okur, metinde `[@anahtar]` biçiminde
+kullanırsınız.
+
+### Derlemek için
 
 ```bash
 quarto render makale/makale.qmd --to pdf
@@ -159,7 +188,7 @@ Quarto kurulu değilse Pandoc da iş görür:
 
 ```bash
 pandoc makale/makale.qmd -o makale/makale.docx --citeproc \
-  --bibliography=makale/kaynaklar.bib
+  --bibliography=makale/kaynaklar.bib --bibliography=makale/zotero.bib
 ```
 
 Not: Pandoc, Quarto'nun çapraz gönderme biçimini (`@fig-noktalar` gibi)
