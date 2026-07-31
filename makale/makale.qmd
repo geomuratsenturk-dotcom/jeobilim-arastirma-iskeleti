@@ -19,9 +19,9 @@ abstract: |
   bulgu neden önemli. Kaynak göstermeyin, kısaltma kullanmayın.]
 
 keywords:
-  - [anahtar kelime 1]
-  - [anahtar kelime 2]
-  - [anahtar kelime 3]
+  - "[anahtar kelime 1]"
+  - "[anahtar kelime 2]"
+  - "[anahtar kelime 3]"
 
 # İki kaynakça dosyası kullanılıyor. Ayrımın nedeni önemli:
 #
@@ -56,7 +56,8 @@ format:
         \linenumbers
   docx:
     number-sections: true
-    reference-doc: null   # Derginin şablonu varsa yolunu buraya yazın
+    # Derginin Word şablonu varsa dosya yolunu buraya yazıp satırı açın:
+    # reference-doc: dergi-sablonu.docx
   html:
     toc: true
     number-sections: true
@@ -177,7 +178,7 @@ Hann pencereleme uygulanmıştır. Ardından 1-20 Hz aralığında, dört köşe
 sıfır fazlı bant geçirgen süzgeç uygulanmıştır (@fig-dalga). Sıfır faz
 tercihi, varış zamanı ölçümlerinde faz kaymasını önlemek içindir.
 
-![[İstasyon] kaydının ham ve süzülmüş dalga formları ile genlik
+![İstasyon kaydının ham ve süzülmüş dalga formları ile genlik
 spektrumu.](../sekiller/sekil_03_dalga_formu.png){#fig-dalga width=95%}
 
 # Bulgular
@@ -189,19 +190,31 @@ aittir. Her şekle ve tabloya metinde en az bir kez atıf yapın.]
 yazmak yerine eğilimi anlatın: "Eğim değerleri kuzeye doğru sistematik
 olarak artmaktadır (@tbl-litoloji)."]
 
-```{r}
+<!--
+TABLOYU OTOMATİK EKLEME
+
+Aşağıdaki kod, `ciktilar/` klasöründeki tabloyu okuyup makaleye
+yerleştirir. Şu an çalıştırılmıyor, çünkü çalışması için Jupyter
+kurulumu gerekiyor ve iskeletin kutudan çıkar çıkmaz derlenmesini
+istiyoruz.
+
+ETKİNLEŞTİRMEK İÇİN:
+
+  1. Jupyter'ı sanal ortamınıza kurun:
+         .venv\Scripts\python.exe -m pip install jupyter
+     (Linux ve macOS: .venv/bin/python -m pip install jupyter)
+
+  2. Aşağıdaki blokta ```python yazan satırı ```{python} yapın
+     ve kapanış satırını olduğu gibi bırakın.
+
+  3. Bloğun içindeki #| eval: false satırını silin.
+
+Bundan sonra analizi her çalıştırdığınızda tablo kendiliğinden
+güncellenir, tıpkı şekiller gibi.
+-->
+
+```python
 #| label: tbl-litoloji
-#| tbl-cap: "Litolojiye göre nokta sayısı ve yükseklik istatistikleri."
-#| eval: false
-
-# Bu blok, ciktilar/ klasöründeki tabloyu doğrudan okur.
-# R yerine Python kullanacaksanız aşağıdaki Python bloğunu açın.
-tablo <- read.csv("../ciktilar/tablo_01_litoloji_ozeti.csv")
-knitr::kable(tablo)
-```
-
-```{python}
-#| label: tbl-litoloji-py
 #| tbl-cap: "Litolojiye göre nokta sayısı ve yükseklik istatistikleri."
 #| eval: false
 
