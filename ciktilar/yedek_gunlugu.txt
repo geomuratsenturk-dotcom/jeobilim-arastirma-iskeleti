@@ -12,3 +12,21 @@ Degisiklikler bulundu, gonderiliyor...
 ?? KUR_OTOMASYON.ps1
 ?? ciktilar/yedek_gunlugu.txt
 ?? gece_yedegi.bat
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'KUR_OTOMASYON.ps1', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ciktilar/yedek_gunlugu.txt', LF will be replaced by CRLF the next time Git touches it
+[main 891d7e7] Otomatik gece yedegi
+ 10 files changed, 525 insertions(+), 7 deletions(-)
+ create mode 100644 BASLAT.bat
+ create mode 100644 KUR_OTOMASYON.ps1
+ create mode 100644 ciktilar/yedek_gunlugu.txt
+ create mode 100644 gece_yedegi.bat
+To https://github.com/geomuratsenturk-dotcom/jeobilim-arastirma-iskeleti.git
+   a1d980d..891d7e7  main -> main
+Yedek basariyla gonderildi. 
+ 
+---------------------------------------------------------------- 
+Cmt 01.08.2026 18:00:01.61 
+Degisiklikler bulundu, gonderiliyor... 
+ M ciktilar/yedek_gunlugu.txt
+?? belgeler/NASIL_CALISIR.md
