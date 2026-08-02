@@ -30,3 +30,16 @@ Cmt 01.08.2026 18:00:01.61
 Degisiklikler bulundu, gonderiliyor... 
  M ciktilar/yedek_gunlugu.txt
 ?? belgeler/NASIL_CALISIR.md
+warning: in the working copy of 'ciktilar/yedek_gunlugu.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'belgeler/NASIL_CALISIR.md', LF will be replaced by CRLF the next time Git touches it
+[main 8199905] Otomatik gece yedegi
+ 2 files changed, 165 insertions(+)
+ create mode 100644 belgeler/NASIL_CALISIR.md
+To https://github.com/geomuratsenturk-dotcom/jeobilim-arastirma-iskeleti.git
+   891d7e7..8199905  main -> main
+Yedek basariyla gonderildi. 
+ 
+---------------------------------------------------------------- 
+Paz 02.08.2026 18:00:01.84 
+Degisiklikler bulundu, gonderiliyor... 
+ M ciktilar/yedek_gunlugu.txt
