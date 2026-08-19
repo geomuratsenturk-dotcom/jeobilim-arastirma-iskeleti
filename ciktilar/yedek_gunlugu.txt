@@ -213,3 +213,12 @@ warning: in the working copy of 'ciktilar/yedek_gunlugu.txt', LF will be replace
 Sal 18.08.2026 18:00:02.40 
 Degisiklikler bulundu, gonderiliyor... 
  M ciktilar/yedek_gunlugu.txt
+warning: in the working copy of 'ciktilar/yedek_gunlugu.txt', LF will be replaced by CRLF the next time Git touches it
+[main c33518a] Otomatik gece yedegi
+ 1 file changed, 8 insertions(+)
+error: failed to push some refs to 'https://github.com/geomuratsenturk-dotcom/jeobilim-arastirma-iskeleti.git'
+^C 
+---------------------------------------------------------------- 
+Çar 19.08.2026 18:00:02.30 
+Degisiklikler bulundu, gonderiliyor... 
+ M ciktilar/yedek_gunlugu.txt
