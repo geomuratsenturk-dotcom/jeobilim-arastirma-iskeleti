@@ -517,3 +517,11 @@ Yedek basariyla gonderildi.
 Per 24.09.2026 18:00:02.17 
 Degisiklikler bulundu, gonderiliyor... 
  M ciktilar/yedek_gunlugu.txt
+warning: in the working copy of 'ciktilar/yedek_gunlugu.txt', LF will be replaced by CRLF the next time Git touches it
+[main af9a3e6] Otomatik gece yedegi
+ 1 file changed, 11 insertions(+)
+^C 
+---------------------------------------------------------------- 
+Cum 25.09.2026 18:00:02.71 
+Degisiklikler bulundu, gonderiliyor... 
+ M ciktilar/yedek_gunlugu.txt
