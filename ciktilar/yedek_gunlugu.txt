@@ -536,3 +536,14 @@ Yedek basariyla gonderildi.
 Cmt 26.09.2026 18:00:02.86 
 Degisiklikler bulundu, gonderiliyor... 
  M ciktilar/yedek_gunlugu.txt
+warning: in the working copy of 'ciktilar/yedek_gunlugu.txt', LF will be replaced by CRLF the next time Git touches it
+[main b034d4a] Otomatik gece yedegi
+ 1 file changed, 11 insertions(+)
+To https://github.com/geomuratsenturk-dotcom/jeobilim-arastirma-iskeleti.git
+   db5ed71..b034d4a  main -> main
+Yedek basariyla gonderildi. 
+ 
+---------------------------------------------------------------- 
+Paz 27.09.2026 18:00:02.14 
+Degisiklikler bulundu, gonderiliyor... 
+ M ciktilar/yedek_gunlugu.txt
