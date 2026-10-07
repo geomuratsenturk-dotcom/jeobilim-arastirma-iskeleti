@@ -637,3 +637,11 @@ warning: in the working copy of 'ciktilar/yedek_gunlugu.txt', LF will be replace
 Sal 06.10.2026 22:47:19.88 
 Degisiklikler bulundu, gonderiliyor... 
  M ciktilar/yedek_gunlugu.txt
+warning: in the working copy of 'ciktilar/yedek_gunlugu.txt', LF will be replaced by CRLF the next time Git touches it
+[main 676cefa] Otomatik gece yedegi
+ 1 file changed, 8 insertions(+)
+ 
+---------------------------------------------------------------- 
+Çar 07.10.2026 18:00:03.15 
+Degisiklikler bulundu, gonderiliyor... 
+ M ciktilar/yedek_gunlugu.txt
