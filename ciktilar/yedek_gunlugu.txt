@@ -678,3 +678,14 @@ Yedek basariyla gonderildi.
 Cmt 10.10.2026 22:57:27.65 
 Degisiklikler bulundu, gonderiliyor... 
  M ciktilar/yedek_gunlugu.txt
+warning: in the working copy of 'ciktilar/yedek_gunlugu.txt', LF will be replaced by CRLF the next time Git touches it
+[main 7db15e5] Otomatik gece yedegi
+ 1 file changed, 11 insertions(+)
+To https://github.com/geomuratsenturk-dotcom/jeobilim-arastirma-iskeleti.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 7db15e5d574636c58d50ef01d57f5c5b07098b43 but expected ea3101e91fa234736e1a37584c54820cbba85a1d)
+error: failed to push some refs to 'https://github.com/geomuratsenturk-dotcom/jeobilim-arastirma-iskeleti.git'
+ 
+---------------------------------------------------------------- 
+Paz 11.10.2026 22:57:29.01 
+Degisiklikler bulundu, gonderiliyor... 
+ M ciktilar/yedek_gunlugu.txt
