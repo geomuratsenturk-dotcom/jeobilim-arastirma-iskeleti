@@ -1150,3 +1150,14 @@ Menuden 5 numarayi secip elle gonderin.
 Sal 24.11.2026 18:00:03.21 
 Degisiklikler bulundu, gonderiliyor... 
  M ciktilar/yedek_gunlugu.txt
+warning: in the working copy of 'ciktilar/yedek_gunlugu.txt', LF will be replaced by CRLF the next time Git touches it
+[main 90dab41] Otomatik gece yedegi
+ 1 file changed, 11 insertions(+)
+To https://github.com/geomuratsenturk-dotcom/jeobilim-arastirma-iskeleti.git
+   f209b16..90dab41  main -> main
+Yedek basariyla gonderildi. 
+ 
+---------------------------------------------------------------- 
+Per 26.11.2026 17:41:36.66 
+Degisiklikler bulundu, gonderiliyor... 
+ M ciktilar/yedek_gunlugu.txt
